@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Izaac — QA Engineer & IT Specialist</title>
+    <meta name="description" content="Pedro Izaac Pereira Carvalho — Mais de 10 anos em TI, migrando para Quality Assurance. Portfólio pessoal.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Dot Grid Background -->
+    <canvas id="dotGrid"></canvas>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">pedro<span class="logo-dot">.</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" data-text="sobre">sobre</a></li>
+            <li><a href="#skills" data-text="skills">skills</a></li>
+            <li><a href="#journey" data-text="jornada">jornada</a></li>
+            <li><a href="#contact" data-text="contato">contato</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-left">
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Disponível para oportunidades
+            </div>
+            <h1 class="hero-title">
+                <span class="line">Eu construo</span>
+                <span class="line">qualidade em</span>
+                <span class="line gradient-text">cada detalhe.</span>
+            </h1>
+            <p class="hero-desc">
+                +10 anos resolvendo problemas reais em TI. Agora, canalizando toda essa experiência 
+                para garantir que software funcione <em>do jeito certo</em>.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="cta-btn">
+                    <span>Vamos conversar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://github.com/PedroiCarvalho" target="_blank" class="ghost-btn">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="photo-frame">
+                <img src="https://avatars.githubusercontent.com/u/208299005?s=400&u=5fda4d567e76186f18f9652148c595337a84f5bf&v=4" alt="Pedro Izaac" class="profile-photo">
+                <div class="frame-accent"></div>
+            </div>
+            <div class="hero-card card-1">
+                <i class="fas fa-bug"></i>
+                <span>QA Tester</span>
+            </div>
+            <div class="hero-card card-2">
+                <i class="fas fa-network-wired"></i>
+                <span>Infra & Redes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="about-grid">
+            <div class="about-label">
+                <span class="section-num">01</span>
+                <h2>Sobre<br>mim</h2>
+            </div>
+            <div class="about-body">
+                <p class="about-lead">
+                    Não sou apenas mais um currículo. Sou alguém que já 
+                    <strong>desmontou, remontou, formatou, cabeou, configurou e debugou</strong> 
+                    de tudo um pouco.
+                </p>
+                <p>
+                    Minha trajetória começou na bancada — literalmente. Manutenção de hardware, 
+                    formatação de máquinas, montagem de redes. Com o tempo, migrei para o desenvolvimento 
+                    web e passei a entender software por dentro. Essa visão completa, do hardware ao código, 
+                    me dá um olhar único sobre qualidade.
+                </p>
+                <p>
+                    Hoje, estou focado em <strong>Quality Assurance</strong>. Minha missão é simples: 
+                    garantir que o produto final funcione exatamente como deveria — e encontrar onde ele falha 
+                    antes que o usuário encontre.
+                </p>
+                <div class="about-markers">
+                    <div class="marker">
+                        <span class="marker-value">10+</span>
+                        <span class="marker-label">anos em TI</span>
+                    </div>
+                    <div class="marker">
+                        <span class="marker-value">Full</span>
+                        <span class="marker-label">stack técnico</span>
+                    </div>
+                    <div class="marker">
+                        <span class="marker-value">QA</span>
+                        <span class="marker-label">foco atual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <div class="section-label">
+            <span class="section-num">02</span>
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-vial"></i></div>
+                <h3>Testes Manuais</h3>
+                <p>Testes exploratórios, funcionais e de regressão com documentação clara e objetiva.</p>
+            </div>
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-clipboard-list"></i></div>
+                <h3>Planejamento de Testes</h3>
+                <p>Criação de cenários, casos de teste e critérios de aceite alinhados ao negócio.</p>
+            </div>
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-bug"></i></div>
+                <h3>Gestão de Bugs</h3>
+                <p>Identificação, documentação e acompanhamento de defeitos com clareza e prioridade.</p>
+            </div>
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>HTML / CSS / JS</h3>
+                <p>Desenvolvimento web front-end com foco em responsividade e boas práticas.</p>
+            </div>
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <h3>Infraestrutura</h3>
+                <p>Montagem, manutenção e configuração de ambientes físicos e virtuais.</p>
+            </div>
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                <h3>Redes & Conectividade</h3>
+                <p>Configuração de roteadores, switches, cabeamento estruturado e troubleshooting.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey / Timeline -->
+    <section id="journey" class="journey">
+        <div class="section-label">
+            <span class="section-num">03</span>
+            <h2>Jornada</h2>
+        </div>
+        <div class="journey-track">
+            <div class="journey-line"></div>
+            <div class="journey-step">
+                <div class="step-marker now">
+                    <i class="fas fa-crosshairs"></i>
+                </div>
+                <div class="step-content">
+                    <span class="step-date">2025 — Agora</span>
+                    <h3>Transição para QA</h3>
+                    <p>Estudando testes de software, metodologias ágeis, ferramentas como Postman e Selenium. Buscando minha primeira oportunidade na área.</p>
+                </div>
+            </div>
+            <div class="journey-step">
+                <div class="step-marker">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="step-content">
+                    <span class="step-date">Projetos Diversos</span>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criação de sites para clientes como freelancer. Responsividade, SEO básico, e resolução de problemas de compatibilidade cross-browser.</p>
+                </div>
+            </div>
+            <div class="journey-step">
+                <div class="step-marker">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="step-content">
+                    <span class="step-date">+10 anos de experiência</span>
+                    <h3>Suporte & Infraestrutura de TI</h3>
+                    <p>Manutenção preventiva e corretiva de hardware, formatação, configuração de redes, suporte ao usuário e garantia de disponibilidade dos ambientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="contact-inner">
+            <span class="section-num">04</span>
+            <h2 class="contact-title">Bora trocar uma ideia<span class="logo-dot">?</span></h2>
+            <p class="contact-desc">
+                Estou em busca da minha primeira oportunidade como <strong>Analista de QA</strong>. 
+                Se você busca alguém com base técnica sólida, pensamento analítico e muita vontade de 
+                aprender, me chama!
+            </p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/pedro-izaac-pereira-carvalho-450961163/" target="_blank" class="contact-chip">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/PedroiCarvalho" target="_blank" class="contact-chip">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/pedro_izaac/" target="_blank" class="contact-chip">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Feito com <span class="logo-dot">♥</span> por Pedro Izaac — 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
