@@ -124,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('open');
-        document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     });
 
     // Close menu on link click
@@ -132,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             menuToggle.classList.remove('active');
             navLinks.classList.remove('open');
-            document.body.style.overflow = '';
         });
     });
 
