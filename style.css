@@ -627,6 +627,101 @@ section {
 }
 
 /* ========================================
+   PROJECTS
+   ======================================== */
+
+.projects {
+    padding-block: 6rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(108, 92, 231, 0.15);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.folder-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    color: var(--text-2);
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--accent-2);
+    transform: translateY(-2px);
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-1);
+    letter-spacing: -0.3px;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style: none;
+    margin-top: auto;
+}
+
+.project-tech-list li {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--accent-2);
+    background: rgba(0, 206, 201, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
    JOURNEY
    ======================================== */
 

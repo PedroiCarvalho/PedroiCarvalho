@@ -154,11 +154,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
+    // 5.5. COUNTER ANIMATION
+    // ==========================================
+    const counters = document.querySelectorAll('.counter');
+    let hasCounted = false;
+
+    function animateCounters() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            
+            let current = 0;
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCounter();
+        });
+    }
+
+    const aboutObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !hasCounted) {
+            hasCounted = true;
+            animateCounters();
+        }
+    }, { threshold: 0.5 });
+    
+    const aboutMarkers = document.querySelector('.about-markers');
+    if (aboutMarkers) aboutObserver.observe(aboutMarkers);
+
+    // ==========================================
     // 6. SCROLL REVEAL — Intersection Observer
     // ==========================================
     const revealElements = document.querySelectorAll(
         '.about-grid, .about-label, .about-body, .about-markers, ' +
         '.section-label, .skill-card, .skills-grid, ' +
+        '.project-card, .projects-grid, ' +
         '.journey-step, .journey-track, ' +
         '.contact-inner'
     );
@@ -167,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('reveal'));
 
     // Add stagger class to grid containers
-    document.querySelectorAll('.skills-grid, .contact-links').forEach(el => {
+    document.querySelectorAll('.skills-grid, .projects-grid, .contact-links').forEach(el => {
         el.classList.add('reveal-stagger');
     });
 
@@ -190,9 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 7. SKILL CARD TILT (subtle 3D)
+    // 7. CARD TILT (subtle 3D)
     // ==========================================
-    document.querySelectorAll('.skill-card').forEach(card => {
+    document.querySelectorAll('[data-tilt]').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
