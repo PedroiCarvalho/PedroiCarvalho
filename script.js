@@ -18,6 +18,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     // ==========================================
+    // 1.5 THEME TOGGLE (Dark/Light)
+    // ==========================================
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlEl = document.documentElement;
+
+    // Load saved preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        htmlEl.classList.remove('dark-theme');
+        htmlEl.classList.add('light-theme');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        // Add transition class
+        htmlEl.classList.add('theme-transitioning');
+
+        const isLight = htmlEl.classList.contains('light-theme');
+
+        if (isLight) {
+            htmlEl.classList.remove('light-theme');
+            htmlEl.classList.add('dark-theme');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            htmlEl.classList.remove('dark-theme');
+            htmlEl.classList.add('light-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'light');
+        }
+
+        // Remove transition class after animation
+        setTimeout(() => {
+            htmlEl.classList.remove('theme-transitioning');
+        }, 500);
+    });
+
+    // ==========================================
     // 2. HAMBURGER MENU (Mobile)
     // ==========================================
     const menuToggle = document.getElementById('menuToggle');

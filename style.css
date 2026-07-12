@@ -197,6 +197,19 @@ img {
     transform: translateY(-2px);
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--accent-glow);
+}
+
 .section-subtitle {
     font-family: var(--font-mono);
     color: var(--accent);
@@ -312,6 +325,34 @@ img {
     background: var(--text-1);
     border-radius: 2px;
     transition: var(--transition-smooth);
+}
+
+/* NAV ACTIONS (Theme Toggle + Hamburger) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: var(--transition-smooth);
+}
+
+.theme-toggle:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.1);
 }
 
 /* ========================================
@@ -776,6 +817,14 @@ img {
     font-family: var(--font-mono);
 }
 
+.edu-date-inline {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-3);
+    margin-top: 0.25rem;
+    display: inline-block;
+}
+
 /* ========================================
    CONTACT
    ======================================== */
@@ -988,4 +1037,74 @@ img {
     .contact-links {
         flex-direction: column;
     }
+}
+
+/* ========================================
+   LIGHT THEME
+   ======================================== */
+
+.light-theme {
+    --bg-color: #f5f5f7;
+    --bg-elevated: rgba(255, 255, 255, 0.7);
+    --text-1: #1a1a2e;
+    --text-2: #4a4a5a;
+    --text-3: #8a8a9a;
+    --surface: rgba(0, 0, 0, 0.03);
+    --surface-hover: rgba(0, 0, 0, 0.06);
+    --border: rgba(0, 0, 0, 0.08);
+    --border-highlight: rgba(0, 0, 0, 0.2);
+    --accent: hsl(var(--hue), 75%, 50%);
+    --accent-glow: hsla(var(--hue), 75%, 50%, 0.25);
+    --accent-2: hsl(180, 70%, 40%);
+}
+
+.light-theme .grain-overlay {
+    opacity: 0.02;
+}
+
+.light-theme .bg-blob {
+    opacity: 0.08;
+}
+
+.light-theme .navbar.scrolled {
+    background: rgba(245, 245, 247, 0.85);
+}
+
+.light-theme .btn-primary {
+    background: var(--text-1);
+    color: var(--bg-color);
+}
+
+.light-theme .glass-card {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.light-theme .profile-img {
+    filter: grayscale(10%) contrast(1.05);
+}
+
+.light-theme .availability-badge {
+    background: rgba(0, 180, 170, 0.08);
+}
+
+.light-theme .edu-icon {
+    background: rgba(0, 180, 170, 0.12);
+}
+
+.light-theme .nav-links {
+    /* Mobile fullscreen menu */
+}
+
+@media (max-width: 768px) {
+    .light-theme .nav-links {
+        background: rgba(245, 245, 247, 0.98);
+    }
+}
+
+/* Smooth theme transition */
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
 }
