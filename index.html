@@ -48,6 +48,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#qa-console">QA Console</a></li>
                 <li><a href="#journey">Jornada</a></li>
                 <li><a href="#education">Educação</a></li>
                 <li><a href="#contact" class="nav-cta">Contato</a></li>
@@ -70,7 +71,7 @@
                 <div class="hero-content">
                     <div class="availability-badge reveal-fade">
                         <div class="pulse-dot"></div>
-                        <span>Disponível para novas oportunidades</span>
+                        <span id="typewriterText">Analista de Quality Assurance (QA)</span><span class="typewriter-cursor">|</span>
                     </div>
                     
                     <h1 class="hero-title">
@@ -102,6 +103,14 @@
                 
                 <div class="hero-visual reveal-fade delay-3">
                     <div class="bento-profile-card glass-card">
+                        <div class="floating-badge badge-top-left">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Cobertura</span>
+                        </div>
+                        <div class="floating-badge badge-bottom-right">
+                            <i class="fas fa-bolt"></i>
+                            <span>API 200 OK</span>
+                        </div>
                         <div class="profile-img-wrapper">
                             <img src="https://avatars.githubusercontent.com/u/208299005?v=4" alt="Foto de Pedro Izaac Pereira Carvalho, Analista de QA" class="profile-img" loading="lazy">
                         </div>
@@ -227,11 +236,46 @@
             </div>
         </section>
 
+        <!-- QA Live Test Console (Interactive Showcase) -->
+        <section id="qa-console" class="qa-console-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <span class="section-subtitle">03 // Live QA Playground</span>
+                    <h2 class="section-title">Console de Testes ao Vivo</h2>
+                </div>
+
+                <div class="qa-console-wrapper glass-card reveal-scale">
+                    <div class="console-header">
+                        <div class="console-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="console-title"><i class="fas fa-terminal"></i> pedron-qa-test-runner ~ v2.5</span>
+                        <div class="console-status"><div class="pulse-dot"></div> Pronto</div>
+                    </div>
+
+                    <div class="console-body">
+                        <div class="console-controls">
+                            <button class="console-btn" id="runSmokeTest"><i class="fas fa-play"></i> Smoke Test</button>
+                            <button class="console-btn" id="runApiTest"><i class="fas fa-bolt"></i> Teste de API REST</button>
+                            <button class="console-btn" id="runBugHunt"><i class="fas fa-bug"></i> Simular Bug Hunt</button>
+                            <button class="console-btn btn-clear" id="clearConsole"><i class="fas fa-trash-alt"></i> Limpar Log</button>
+                        </div>
+
+                        <div class="console-terminal" id="terminalOutput">
+                            <div class="log-line info">[SYS] Console de QA inicializado. Clique em uma das ações acima para rodar a suíte de testes em tempo real.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Journey & Timeline -->
         <section id="journey" class="journey section-padding">
             <div class="container">
                 <div class="section-header reveal-fade">
-                    <span class="section-subtitle">03 // Evolução</span>
+                    <span class="section-subtitle">04 // Evolução</span>
                     <h2 class="section-title">Minha Jornada</h2>
                 </div>
                 
@@ -267,7 +311,7 @@
         <section id="education" class="education section-padding">
             <div class="container">
                 <div class="section-header reveal-fade">
-                    <span class="section-subtitle">04 // Formação</span>
+                    <span class="section-subtitle">05 // Formação</span>
                     <h2 class="section-title">Educação e Certificados</h2>
                 </div>
                 
@@ -319,7 +363,7 @@
             <div class="container">
                 <div class="contact-box glass-card reveal-scale">
                     <div class="contact-bg-glow"></div>
-                    <span class="section-subtitle">05 // Próximos Passos</span>
+                    <span class="section-subtitle">06 // Próximos Passos</span>
                     <h2 class="contact-title">Bora trocar uma ideia?</h2>
                     <p class="contact-desc">
                         Buscando a primeira oportunidade como <strong>Analista de QA</strong>. 

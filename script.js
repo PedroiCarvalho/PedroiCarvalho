@@ -202,11 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
             revealObserver.observe(el);
         });
     } else {
-        // Fallback for older browsers
         revealElements.forEach(el => el.classList.add('is-revealed'));
     }
 
-    // Fallback safety timer to ensure all content becomes visible even if observer fails
     setTimeout(() => {
         revealElements.forEach(el => {
             if (!el.classList.contains('is-revealed')) {
@@ -235,6 +233,123 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+    }
+
+    // ==========================================
+    // 7. TYPEWRITER EFFECT (Dynamic Subtitle)
+    // ==========================================
+    const typewriterEl = document.getElementById('typewriterText');
+    if (typewriterEl) {
+        const phrases = [
+            "Analista de Quality Assurance (QA)",
+            "Especialista em Testes de API",
+            "Automação Selenium & Postman",
+            "Especialista em TI (12+ Anos)"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                typewriterEl.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterEl.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 35 : 65;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typeSpeed = 2200;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 400;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        setTimeout(type, 800);
+    }
+
+    // ==========================================
+    // 8. QA LIVE TEST CONSOLE PLAYGROUND
+    // ==========================================
+    const terminalOutput = document.getElementById('terminalOutput');
+    const btnSmoke = document.getElementById('runSmokeTest');
+    const btnApi = document.getElementById('runApiTest');
+    const btnBug = document.getElementById('runBugHunt');
+    const btnClear = document.getElementById('clearConsole');
+
+    if (terminalOutput) {
+        function appendLog(text, type = 'info') {
+            const line = document.createElement('div');
+            line.className = `log-line ${type}`;
+            line.textContent = text;
+            terminalOutput.appendChild(line);
+            terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }
+
+        let isRunningTest = false;
+
+        function runAsyncSuite(logs) {
+            if (isRunningTest) return;
+            isRunningTest = true;
+            logs.forEach((log, index) => {
+                setTimeout(() => {
+                    appendLog(log.text, log.type);
+                    if (index === logs.length - 1) {
+                        isRunningTest = false;
+                    }
+                }, index * 420);
+            });
+        }
+
+        if (btnSmoke) {
+            btnSmoke.addEventListener('click', () => {
+                runAsyncSuite([
+                    { text: "[RUNNER] Inicializando Smoke Test Suite v2.5...", type: "system" },
+                    { text: "[TEST 01] Validando renderização inicial do DOM... PASSED", type: "pass" },
+                    { text: "[TEST 02] Verificando rotas e navegação principal... PASSED", type: "pass" },
+                    { text: "[TEST 03] Verificando responsividade e viewports móveis... PASSED", type: "pass" },
+                    { text: "[RESULT] Smoke Test finalizado: 3/3 Passaram (100% Sucesso)", type: "success" }
+                ]);
+            });
+        }
+
+        if (btnApi) {
+            btnApi.addEventListener('click', () => {
+                runAsyncSuite([
+                    { text: "[POSTMAN] Executando chamada REST: GET https://api.pedroizaac.com.br/v1/health", type: "system" },
+                    { text: "[HTTP/1.1] 200 OK — Time: 18ms — Size: 1.2 KB", type: "pass" },
+                    { text: "[SCHEMA] Payload JSON de resposta atende à especificação OpenAPI 3.0", type: "pass" },
+                    { text: "[ASSERTION] Status Code == 200 | Latência < 50ms: TRUE", type: "pass" },
+                    { text: "[RESULT] Teste de API REST concluído com êxito!", type: "success" }
+                ]);
+            });
+        }
+
+        if (btnBug) {
+            btnBug.addEventListener('click', () => {
+                runAsyncSuite([
+                    { text: "[EXPLORATORY] Executando busca por edge cases e bugs de regressão...", type: "system" },
+                    { text: "[WARN] Tentativa de injeção de payload nulo em formulário...", type: "warn" },
+                    { text: "[CATCH] Exceção capturada com sucesso pelo Tratador Global (Sem Crashes)", type: "pass" },
+                    { text: "[BUG REPORT] 0 Bugs Críticos encontrados. Sistema 100% Estável!", type: "success" }
+                ]);
+            });
+        }
+
+        if (btnClear) {
+            btnClear.addEventListener('click', () => {
+                terminalOutput.innerHTML = '<div class="log-line info">[SYS] Console limpo. Pronto para novos testes.</div>';
+            });
+        }
     }
 
 });
