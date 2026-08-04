@@ -56,7 +56,7 @@
                 <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
                     <i class="fas fa-moon" id="themeIcon"></i>
                 </button>
-                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação">
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -157,7 +157,10 @@
                     <div class="bento-item glass-card col-span-2 reveal-scale delay-3">
                         <div class="bento-inner tech-marquee">
                             <div class="marquee-content">
-                                <span>Postman</span> • <span>Selenium</span> • <span>Jira</span> • <span>HTML/CSS/JS</span> • <span>API Testing</span> • <span>Infra</span> • <span>Postman</span> • <span>Selenium</span> • <span>Jira</span>
+                                <span>Postman</span> • <span>Selenium</span> • <span>Jira</span> • <span>HTML/CSS/JS</span> • <span>API Testing</span> • <span>Infra</span>
+                            </div>
+                            <div class="marquee-content" aria-hidden="true">
+                                <span>Postman</span> • <span>Selenium</span> • <span>Jira</span> • <span>HTML/CSS/JS</span> • <span>API Testing</span> • <span>Infra</span>
                             </div>
                         </div>
                     </div>
