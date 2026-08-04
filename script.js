@@ -9,13 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const navbar = document.getElementById('navbar');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    }, { passive: true });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }, { passive: true });
+    }
 
     // ==========================================
     // 1.5 THEME TOGGLE (Dark/Light)
@@ -24,40 +26,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeIcon = document.getElementById('themeIcon');
     const htmlEl = document.documentElement;
 
-    // Load saved preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         htmlEl.classList.remove('dark-theme');
         htmlEl.classList.add('light-theme');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    }
-
-    themeToggle.addEventListener('click', () => {
-        // Add transition class
-        htmlEl.classList.add('theme-transitioning');
-
-        const isLight = htmlEl.classList.contains('light-theme');
-
-        if (isLight) {
-            htmlEl.classList.remove('light-theme');
-            htmlEl.classList.add('dark-theme');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            htmlEl.classList.remove('dark-theme');
-            htmlEl.classList.add('light-theme');
+        if (themeIcon) {
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
-            localStorage.setItem('theme', 'light');
         }
+    }
 
-        // Remove transition class after animation
-        setTimeout(() => {
-            htmlEl.classList.remove('theme-transitioning');
-        }, 500);
-    });
+    if (themeToggle && themeIcon) {
+        themeToggle.addEventListener('click', () => {
+            htmlEl.classList.add('theme-transitioning');
+            const isLight = htmlEl.classList.contains('light-theme');
+
+            if (isLight) {
+                htmlEl.classList.remove('light-theme');
+                htmlEl.classList.add('dark-theme');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlEl.classList.remove('dark-theme');
+                htmlEl.classList.add('light-theme');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            }
+
+            setTimeout(() => {
+                htmlEl.classList.remove('theme-transitioning');
+            }, 500);
+        });
+    }
 
     // ==========================================
     // 2. HAMBURGER MENU (Mobile)
@@ -66,11 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('navLinks');
 
     const closeMenu = () => {
-        if (!menuToggle) return;
+        if (!menuToggle || !navLinks) return;
         const spans = menuToggle.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+        if (spans.length >= 3) {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
         menuToggle.classList.remove('active');
         menuToggle.setAttribute('aria-expanded', 'false');
         navLinks.classList.remove('open');
@@ -84,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const isOpen = menuToggle.classList.contains('active');
             menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             
-            if (isOpen) {
+            if (isOpen && spans.length >= 3) {
                 spans[0].style.transform = 'translateY(8px) rotate(45deg)';
                 spans[1].style.opacity = '0';
                 spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
@@ -125,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const target = document.querySelector(id);
             if (target) {
-                const offset = window.innerWidth <= 768 ? 75 : 100; // Account for navbar height on mobile/desktop
+                const offset = window.innerWidth <= 768 ? 75 : 100;
                 const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
                 window.scrollTo({ top, behavior: 'smooth' });
             }
@@ -149,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function animateCounters() {
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-target');
+            if (!target) return;
             const duration = 2000;
             const increment = target / (duration / 16);
             
@@ -167,35 +172,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 5. SCROLL REVEAL (Intersection Observer)
+    // 5. SCROLL REVEAL (Intersection Observer + Fallback)
     // ==========================================
     const revealElements = document.querySelectorAll('.reveal-fade, .reveal-scale, .reveal-slide-up');
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -20px 0px',
-        threshold: 0.05
-    };
+    if ('IntersectionObserver' in window) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -20px 0px',
+            threshold: 0.05
+        };
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-revealed');
-                
-                // Trigger counter animation if it's visible
-                if (entry.target.querySelector('.counter') || entry.target.classList.contains('counter')) {
-                    if (!hasCounted) {
-                        hasCounted = true;
-                        animateCounters();
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-revealed');
+                    
+                    if (entry.target.querySelector('.counter') || entry.target.classList.contains('counter')) {
+                        if (!hasCounted) {
+                            hasCounted = true;
+                            animateCounters();
+                        }
                     }
                 }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+    } else {
+        // Fallback for older browsers
+        revealElements.forEach(el => el.classList.add('is-revealed'));
+    }
+
+    // Fallback safety timer to ensure all content becomes visible even if observer fails
+    setTimeout(() => {
+        revealElements.forEach(el => {
+            if (!el.classList.contains('is-revealed')) {
+                el.classList.add('is-revealed');
             }
         });
-    }, observerOptions);
-
-    revealElements.forEach(el => {
-        revealObserver.observe(el);
-    });
+    }, 800);
 
     // ==========================================
     // 6. BENTO GLOW EFFECT (Fine Pointer Mouse Tracking)
@@ -215,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (glow) {
                     glow.style.background = `radial-gradient(circle at ${x}px ${y}px, var(--accent-glow) 0%, transparent 60%)`;
                 }
+            });
         });
     }
 
