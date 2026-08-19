@@ -3,118 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro Izaac — Analista de QA & Especialista em TI</title>
-    <meta name="description" content="Pedro Izaac Pereira Carvalho — Especialista em TI com 12+ anos de experiência, focado em Quality Assurance (QA), Testes de API e Automação.">
+    <title>Pedro Izaac Carvalho — QA & Infraestrutura de TI</title>
+    <meta name="description" content="Currículo e portfólio profissional de Pedro Izaac Pereira Carvalho. Especialista em TI com 12+ anos de experiência, em transição para Quality Assurance (QA) e Automação de Testes.">
+    <meta name="author" content="Pedro Izaac Pereira Carvalho">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     
-    <!-- Open Graph / Social Sharing -->
+    <!-- Open Graph / Redes Sociais -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://curriculo.pedroizaac.com.br">
-    <meta property="og:title" content="Pedro Izaac — Analista de QA & Especialista em TI">
-    <meta property="og:description" content="Especialista em TI com 12+ anos de experiência, focado em Quality Assurance (QA). Transformo requisitos complexos em testes robustos e confiáveis.">
-    <meta property="og:image" content="https://curriculo.pedroizaac.com.br/favicon.png">
+    <meta property="og:url" content="https://pedroicarvalho.github.io/PedroiCarvalho/">
+    <meta property="og:title" content="Pedro Izaac Carvalho — QA & Infraestrutura de TI">
+    <meta property="og:description" content="12+ anos em TI e Infraestrutura unificados à Engenharia de Qualidade de Software (QA), automação de testes e validação de APIs.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/208299005?v=4">
     
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Poppins (Títulos) & Inter (Corpo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Folha de Estilos -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Ambient Background Blobs -->
-    <div class="bg-blob blob-1"></div>
-    <div class="bg-blob blob-2"></div>
+    <!-- Fundo com iluminação ambiente sutil -->
+    <div class="ambient-glow" aria-hidden="true">
+        <div class="glow-sphere glow-primary"></div>
+        <div class="glow-sphere glow-secondary"></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-text">Pedro Izaac</span>
-                <span class="logo-badge">QA</span>
+    <!-- Header / Navbar Principal -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <a href="#hero" class="brand-logo" aria-label="Pedro Izaac - Início">
+                <span class="brand-name">Pedro Izaac</span>
+                <span class="brand-tag">QA &amp; Infra</span>
             </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#journey">Jornada</a></li>
-                <li><a href="#education">Educação</a></li>
-                <li><a href="#contact" class="nav-cta">Contato</a></li>
-            </ul>
 
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
-                    <i class="fas fa-moon" id="themeIcon"></i>
+            <nav class="nav-menu" id="navMenu" aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">Sobre mim</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link">Projetos</a></li>
+                    <li><a href="#experience" class="nav-link">Experiências</a></li>
+                    <li><a href="#education" class="nav-link">Formação</a></li>
+                    <li><a href="#contact" class="nav-link nav-link-contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-switch-btn" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema de cores">
+                    <i class="fas fa-moon theme-icon" id="themeIcon"></i>
                 </button>
-                <button class="btn btn-sm btn-outline no-print" id="navDownloadCV" title="Baixar currículo em PDF">
+                <button class="btn btn-header-cv" id="navDownloadCV" title="Baixar currículo em PDF">
                     <i class="fas fa-file-pdf"></i>
-                    <span class="desktop-only">Currículo PDF</span>
+                    <span class="cv-label">Baixar CV</span>
                 </button>
-                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
-                    <span></span><span></span><span></span>
+                <button class="mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
                 </button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero section-padding">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="status-badge">
-                        <span class="pulse-dot"></span>
-                        <span>Disponível para Oportunidades em QA & TI</span>
+    <main id="mainContent">
+        <!-- ============================================================
+             1. HERO SECTION (Acima da dobra)
+             ============================================================ -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-layout">
+                <div class="hero-text-content">
+                    <div class="availability-badge">
+                        <span class="badge-status-dot"></span>
+                        <span>Disponível para Oportunidades em QA &amp; Infraestrutura</span>
                     </div>
-                    
-                    <h1 class="hero-title">
-                        Qualidade de Software com <span class="gradient-text">Visão Analítica</span> e Base Sólida em TI.
+
+                    <h1 class="hero-headline">
+                        Pedro Izaac Carvalho — <span class="accent-text">Garantia da Qualidade (QA) &amp; Infra de TI</span>
                     </h1>
-                    
-                    <p class="hero-desc">
-                        Profissional com <strong>12+ anos de bagagem técnica em TI</strong>, atuando com foco em 
-                        <strong>Quality Assurance (QA)</strong>, testes funcionais, automação e validação de APIs REST. 
-                        Transformo requisitos complexos em testes robustos e confiáveis.
+
+                    <p class="hero-subheadline">
+                        Profissional com <strong>12+ anos de sólida bagagem técnica em TI, suporte e infraestrutura</strong>, em transição estratégica para <strong>Quality Assurance (QA)</strong>. Combino visão analítica para investigação de causa raiz (troubleshooting), automação de testes, validação de APIs e base em Front-End para prevenir falhas e elevar a qualidade de software.
                     </p>
-                    
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="far fa-envelope"></i>
-                            <span>Entrar em Contato</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/pedro-izaac-pereira-carvalho-450961163/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                            <i class="fab fa-linkedin-in"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/PedroiCarvalho" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <button class="btn btn-outline" id="downloadCV">
-                            <i class="fas fa-download"></i>
-                            <span>Baixar PDF</span>
+
+                    <div class="hero-cta-group">
+                        <button class="btn btn-primary" id="heroDownloadCV">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Baixar CV (PDF)</span>
                         </button>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-vial-circle-check"></i>
+                            <span>Ver Projetos</span>
+                        </a>
+                        <a href="#contact" class="btn btn-ghost">
+                            <i class="far fa-paper-plane"></i>
+                            <span>Contato</span>
+                        </a>
+                    </div>
+
+                    <!-- Métricas objetivas para contratantes -->
+                    <div class="hero-quick-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">12+</span>
+                            <span class="stat-caption">Anos de experiência técnica em TI</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-card">
+                            <span class="stat-number">3x Pós</span>
+                            <span class="stat-caption">Qualidade, Arq. Software &amp; Web</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-card">
+                            <span class="stat-number">QA + Infra</span>
+                            <span class="stat-caption">Visão de ponta a ponta</span>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="hero-visual">
-                    <div class="profile-card glass-card">
-                        <div class="profile-img-wrapper">
-                            <img src="https://avatars.githubusercontent.com/u/208299005?v=4" alt="Foto de Pedro Izaac Pereira Carvalho, Analista de QA" class="profile-img" loading="lazy">
-                        </div>
-                        <div class="profile-info">
-                            <h3>Pedro Izaac P. Carvalho</h3>
-                            <p class="profile-role">Analista de QA & Especialista TI</p>
-                            <div class="profile-tags">
-                                <span class="tag"><i class="fas fa-vial"></i> QA Tester</span>
-                                <span class="tag"><i class="fas fa-bolt"></i> API REST</span>
-                                <span class="tag"><i class="fas fa-server"></i> Infra & Redes</span>
+
+                <div class="hero-visual-content">
+                    <div class="profile-card-wrapper">
+                        <div class="profile-card">
+                            <div class="profile-image-frame">
+                                <img src="https://avatars.githubusercontent.com/u/208299005?v=4" 
+                                     alt="Fotografia de Pedro Izaac Pereira Carvalho" 
+                                     class="profile-photo"
+                                     width="320"
+                                     height="320"
+                                     loading="eager">
+                                <div class="profile-online-badge" title="Disponível para contratação">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="profile-card-details">
+                                <h2 class="profile-name">Pedro Izaac P. Carvalho</h2>
+                                <p class="profile-role">QA Tester &amp; Especialista em TI</p>
+                                <div class="profile-tech-chips">
+                                    <span class="tech-chip"><i class="fas fa-vial"></i> QA Manual/Auto</span>
+                                    <span class="tech-chip"><i class="fas fa-bolt"></i> Postman / API</span>
+                                    <span class="tech-chip"><i class="fas fa-server"></i> Infra &amp; Redes</span>
+                                    <span class="tech-chip"><i class="fab fa-js"></i> JavaScript</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -122,272 +156,790 @@
             </div>
         </section>
 
-        <!-- Highlights Bar -->
-        <section class="highlights-section">
+        <!-- ============================================================
+             2. SOBRE MIM
+             ============================================================ -->
+        <section id="about" class="section-container">
             <div class="container">
-                <div class="highlights-grid">
-                    <div class="highlight-item glass-card">
-                        <span class="highlight-num gradient-text counter" data-target="12">12+</span>
-                        <span class="highlight-label">Anos em TI & Infra</span>
-                    </div>
-                    <div class="highlight-item glass-card">
-                        <span class="highlight-icon"><i class="fas fa-check-double"></i></span>
-                        <span class="highlight-label">QA & Engenharia de Testes</span>
-                    </div>
-                    <div class="highlight-item glass-card">
-                        <span class="highlight-icon"><i class="fas fa-laptop-code"></i></span>
-                        <span class="highlight-label">Automação Selenium & Postman</span>
-                    </div>
-                    <div class="highlight-item glass-card">
-                        <span class="highlight-icon"><i class="fas fa-graduation-cap"></i></span>
-                        <span class="highlight-label">Pós-Graduando em Qualidade Web</span>
-                    </div>
+                <div class="section-heading">
+                    <span class="section-pre-title">01 / Perfil Profissional</span>
+                    <h2 class="section-main-title">Sobre Mim</h2>
+                    <div class="section-line"></div>
                 </div>
-            </div>
-        </section>
 
-        <!-- About -->
-        <section id="about" class="about section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">01 // Sobre Mim</span>
-                    <h2 class="section-title">Minha Trajetória Profissional</h2>
-                </div>
-                
                 <div class="about-grid">
-                    <div class="about-main glass-card">
-                        <div class="about-icon"><i class="fas fa-user-astronaut"></i></div>
-                        <h3>Quem é Pedro Izaac?</h3>
-                        <p>
-                            Tenho uma trajetória sólida de mais de uma década atuando na área de Tecnologia da Informação, com vasta experiência em suporte técnico, infraestrutura de redes e desenvolvimento web.
+                    <div class="about-narrative-card">
+                        <h3 class="about-greeting">Rigor analítico, mentalidade investigativa e paixão pela excelência de software.</h3>
+                        <p class="about-paragraph">
+                            Sou um profissional de Tecnologia da Informação com mais de uma década de experiência prática liderando serviços técnicos, manutenção de computadores, instalação de sistemas e infraestrutura corporativa na <strong>Padux</strong>.
                         </p>
-                        <p>
-                            Atualmente, meu foco principal é a **Engenharia de Qualidade de Software (QA)**. Unifico o meu histórico em troubleshooting técnico e visão analítica para antecipar falhas, criar cenários de testes eficientes e garantir entregas de software de alta performance e excelência em UX.
+                        <p class="about-paragraph">
+                            Atualmente, estou consolidando minha <strong>transição estratégica para a Engenharia de Qualidade de Software (QA)</strong>. Meu diferencial competitivo é unir o conhecimento aprofundado de hardware, redes e sistemas operacionais à elaboração de planos de teste minuciosos, automação com JavaScript/Selenium, testes de integração de APIs com Postman e compreensão da camada de Front-End (HTML, CSS, JS).
+                        </p>
+                        <p class="about-paragraph">
+                            Tenho perfil colaborativo, proativo e orientado a processos com foco em entregar software sem falhas, antecipar riscos antes que cheguem a produção e garantir a melhor experiência para os usuários finais.
                         </p>
                     </div>
 
-                    <div class="about-side">
-                        <div class="side-card glass-card">
-                            <div class="side-icon"><i class="fas fa-bullseye"></i></div>
-                            <h4>Objetivo Profissional</h4>
-                            <p>Atuar como Analista de QA (Manual ou Automação), agregando valor com rigor técnico, validação de APIs e prevenção de defeitos.</p>
+                    <div class="about-pillars">
+                        <div class="pillar-card">
+                            <div class="pillar-icon">
+                                <i class="fas fa-magnifying-glass-chart"></i>
+                            </div>
+                            <div class="pillar-info">
+                                <h4>Investigação de Causa Raiz (Root Cause)</h4>
+                                <p>Anos de troubleshooting me capacitaram a não apenas encontrar o bug, mas compreender o fluxo exato de dados e infraestrutura onde a falha se originou.</p>
+                            </div>
                         </div>
-                        <div class="side-card glass-card">
-                            <div class="side-icon"><i class="fas fa-lightbulb"></i></div>
-                            <h4>Diferencial Competitivo</h4>
-                            <p>Base forte em infraestrutura de redes e servidores, permitindo investigar problemas até a camada de integração e backend.</p>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="pillar-info">
+                                <h4>Visão Holística (Infra + Front + QA)</h4>
+                                <p>Compreendo a jornada completa da aplicação: do comportamento na interface do usuário (UI) até a comunicação via requisições HTTP e ambiente de servidores.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="pillar-info">
+                                <h4>Processos, Métricas &amp; Conformidade</h4>
+                                <p>Experiência com auditoria de dados no IBGE e graduação em Administração, garantindo organização, documentação rigorosa e aderência a metodologias ágeis.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills -->
-        <section id="skills" class="skills section-padding">
+        <!-- ============================================================
+             3. HABILIDADES
+             ============================================================ -->
+        <section id="skills" class="section-container bg-surface-alt">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">02 // Expertise Técnica</span>
-                    <h2 class="section-title">Matriz de Habilidades</h2>
+                <div class="section-heading">
+                    <span class="section-pre-title">02 / Competências Técnicas</span>
+                    <h2 class="section-main-title">Matriz de Habilidades</h2>
+                    <p class="section-intro-text">Organização equilibrada entre Garantia da Qualidade, Ferramentas de Teste e Infraestrutura Técnica.</p>
+                    <div class="section-line"></div>
                 </div>
-                
-                <div class="bento-skills-grid">
-                    <div class="skill-card glass-card">
-                        <div class="skill-icon"><i class="fas fa-vial"></i></div>
-                        <h3>Testes Manuais & Qualidade</h3>
-                        <p>Testes funcionais, exploratórios, regressão, smoke e sanity tests. Elaboração detalhada de planos de teste e cenários BDD.</p>
-                        <ul class="skill-list">
-                            <li>Testes Funcionais & Não-Funcionais</li>
-                            <li>Casos de Teste & Regressão</li>
-                            <li>Reporte e Gestão de Defeitos</li>
-                        </ul>
-                    </div>
 
-                    <div class="skill-card glass-card">
-                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                        <h3>Ferramentas & Automação</h3>
-                        <p>Uso avançado de ferramentas de testes e automação para otimizar a validação de código e processos.</p>
-                        <div class="tech-pills">
-                            <span class="tech-pill"><i class="fas fa-check"></i> Postman</span>
-                            <span class="tech-pill"><i class="fas fa-check"></i> Selenium</span>
-                            <span class="tech-pill"><i class="fas fa-check"></i> JMeter</span>
-                            <span class="tech-pill"><i class="fas fa-check"></i> Jira / Trello</span>
-                            <span class="tech-pill"><i class="fas fa-check"></i> Chrome DevTools</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card glass-card">
-                        <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                        <h3>APIs & Backend</h3>
-                        <p>Inspeção e validação completa de endpoints RESTful, códigos de status HTTP, cabeçalhos e validação de payloads JSON.</p>
-                        <ul class="skill-list">
-                            <li>Validação de Requisições REST</li>
-                            <li>Status Codes & Response Times</li>
-                            <li>Inspeção de Payloads JSON</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-card glass-card">
-                        <div class="skill-icon"><i class="fas fa-code"></i></div>
-                        <h3>Desenvolvimento Web</h3>
-                        <p>Desenvolvimento e inspeção de aplicações web responsivas focadas em usabilidade e boas práticas.</p>
-                        <div class="tech-pills">
-                            <span class="tech-pill">HTML5</span>
-                            <span class="tech-pill">CSS3</span>
-                            <span class="tech-pill">JavaScript ES6+</span>
-                            <span class="tech-pill">Git / GitHub</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card glass-card full-width">
-                        <div class="skill-header-row">
-                            <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <div class="skills-category-grid">
+                    <!-- Categoria 1: QA & Testes de Software -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon-wrapper front-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
                             <div>
-                                <h3>Infraestrutura, Redes & Troubleshooting</h3>
-                                <p>Sólidos 12 anos em suporte, manutenção, montagem de redes e administração de servidores — diferencial crucial na investigação profunda de causas raiz (root cause analysis).</p>
+                                <h3 class="category-title">Garantia da Qualidade (QA)</h3>
+                                <p class="category-subtitle">Metodologias e tipos de teste</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Journey & Timeline -->
-        <section id="journey" class="journey section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">03 // Experiência</span>
-                    <h2 class="section-title">Jornada Profissional</h2>
-                </div>
-                
-                <div class="timeline">
-                    <div class="timeline-line"></div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-dot active">
-                            <div class="dot-inner"></div>
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <span class="timeline-badge">Atual</span>
-                                <span class="timeline-date">2025 — Presente</span>
-                            </div>
-                            <h3>Engenharia & Automação em QA</h3>
-                            <h4>Formação Contínua & Projetos Práticos</h4>
-                            <p>Especialização em qualidade de software, testes automatizados de interface com Selenium WebDriver, testes de API RESTful com Postman e aplicação de metodologias ágeis (Scrum/Kanban) na gestão de testes.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-dot">
-                            <div class="dot-inner"></div>
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <span class="timeline-date">2014 — Presente</span>
-                            </div>
-                            <h3>PDX TECH — Proprietário & Especialista em TI</h3>
-                            <h4>Serviços Técnicos e Soluções em TI</h4>
-                            <p>Gerenciamento completo de infraestrutura de TI, desenvolvimento de sites institucionais responsivos (HTML/CSS/JS), montagem e configuração de redes de computadores, suporte técnico preventivo/corretivo e suporte ao cliente final.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section id="education" class="education section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">04 // Qualificação</span>
-                    <h2 class="section-title">Educação e Certificados</h2>
-                </div>
-                
-                <div class="education-grid">
-                    <div class="edu-card glass-card">
-                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <span class="edu-date">2025 — Presente</span>
-                        <h3>Pós-graduação Lato Sensu</h3>
-                        <h4>FAAL - Faculdade Alcance</h4>
-                        <ul class="edu-list">
-                            <li>Desenvolvimento em Aplicações Web</li>
-                            <li>Gestão da Qualidade de Software</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="edu-card glass-card">
-                        <div class="edu-icon"><i class="fas fa-certificate"></i></div>
-                        <span class="edu-date">Certificações</span>
-                        <h3>Cursos Livres em QA</h3>
-                        <h4>Capacitação Técnica</h4>
-                        <ul class="edu-list">
-                            <li>Javascript para QAs (Udemy)</li>
-                            <li>Testes Automáticos Completo (Udemy)</li>
-                            <li>Testes de Software com Julio de Lima</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="edu-card glass-card">
-                        <div class="edu-icon"><i class="fas fa-university"></i></div>
-                        <span class="edu-date">Graduações</span>
-                        <h3>Formação Acadêmica</h3>
-                        <ul class="edu-list">
-                            <li>
-                                <strong>Administração</strong> (UFCA)<br>
-                                <span class="edu-date-inline">2016 — 2023</span>
+                        <ul class="skill-items-list">
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-check-double"></i> Testes Manuais &amp; Exploratórios</span>
+                                    <span class="skill-level-tag">Sólido</span>
+                                </div>
+                                <p class="skill-item-desc">Testes funcionais, testes de regressão, smoke tests, sanity tests e testes de aceitação (UAT).</p>
                             </li>
-                            <li style="margin-top: 0.75rem;">
-                                <strong>Sistemas de Informação</strong> (FAP)<br>
-                                <span class="edu-date-inline">2009 — 2013</span>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-list-check"></i> Planejamento &amp; Casos de Teste</span>
+                                    <span class="skill-level-tag">Sólido</span>
+                                </div>
+                                <p class="skill-item-desc">Elaboração de cenários de teste, critérios de aceite, escrita em formato BDD (Dado/Quando/Então) e matriz de rastreabilidade.</p>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-bug"></i> Gestão de Defeitos &amp; Bug Reports</span>
+                                    <span class="skill-level-tag">Sólido</span>
+                                </div>
+                                <p class="skill-item-desc">Evidências claras, passos detalhados de reprodução, logs técnicos, severidade e priorização.</p>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-universal-access"></i> Acessibilidade &amp; Usabilidade</span>
+                                    <span class="skill-level-tag">Intermediário</span>
+                                </div>
+                                <p class="skill-item-desc">Avaliação de heurísticas de usabilidade, conformidade WCAG e navegação multiplataforma.</p>
                             </li>
                         </ul>
                     </div>
+
+                    <!-- Categoria 2: Ferramentas & Automação -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon-wrapper design-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h3 class="category-title">Automação &amp; APIs</h3>
+                                <p class="category-subtitle">Validação de backend e fluxos web</p>
+                            </div>
+                        </div>
+                        <ul class="skill-items-list">
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-bolt"></i> Postman &amp; Testes de API REST</span>
+                                    <span class="skill-level-tag">Sólido</span>
+                                </div>
+                                <p class="skill-item-desc">Validação de endpoints, códigos de status HTTP, headers, contratos e schemas JSON com scripts de teste.</p>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fab fa-js"></i> JavaScript para QAs</span>
+                                    <span class="skill-level-tag">Sólido</span>
+                                </div>
+                                <p class="skill-item-desc">Lógica de programação aplicada a testes, manipulação de assincronismo (Promises/Async-Await) e assertions.</p>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-desktop"></i> Selenium WebDriver</span>
+                                    <span class="skill-level-tag highlight-tag">Em evolução contínua</span>
+                                </div>
+                                <p class="skill-item-desc">Automação de testes funcionais de interface web (E2E), localização de elementos por XPath/CSS e esperas explícitas.</p>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-toolbox"></i> DevTools, Git &amp; Jira</span>
+                                    <span class="skill-level-tag">Sólido</span>
+                                </div>
+                                <p class="skill-item-desc">Inspeção de Network, console de erros, versionamento Git e gerenciamento de tarefas no Scrum/Kanban.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Categoria 3: Infraestrutura, Redes & Front-End -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon-wrapper tools-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div>
+                                <h3 class="category-title">Infraestrutura &amp; TI</h3>
+                                <p class="category-subtitle">Base técnica de 12+ anos e front-end</p>
+                            </div>
+                        </div>
+                        <ul class="skill-items-list">
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-network-wired"></i> Redes &amp; Protocolos TCP/IP</span>
+                                    <span class="skill-level-tag">Avançado</span>
+                                </div>
+                                <p class="skill-item-desc">Configuração de roteamento, DNS, DHCP, segurança de rede e diagnóstico de conectividade.</p>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-screwdriver-wrench"></i> Suporte Técnico &amp; Sistemas</span>
+                                    <span class="skill-level-tag">Avançado</span>
+                                </div>
+                                <p class="skill-item-desc">Manutenção de hardware/software, administração de sistemas operacionais (Windows/Linux) e troubleshooting.</p>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fab fa-html5"></i> Base Front-End (HTML/CSS)</span>
+                                    <span class="skill-level-tag">Sólido</span>
+                                </div>
+                                <p class="skill-item-desc">Compreensão profunda da árvore DOM, estruturação semântica, estilos CSS e responsividade.</p>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-item-header">
+                                    <span class="skill-name"><i class="fas fa-database"></i> Fundamentos de Dados &amp; SQL</span>
+                                    <span class="skill-level-tag">Intermediário</span>
+                                </div>
+                                <p class="skill-item-desc">Consultas relacionais, integridade de dados e validação de persistência no backend.</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="contact section-padding">
+        <!-- ============================================================
+             4. PROJETOS
+             ============================================================ -->
+        <section id="projects" class="section-container">
             <div class="container">
-                <div class="contact-box glass-card">
-                    <div class="contact-bg-glow"></div>
-                    <span class="section-subtitle">05 // Conexão</span>
-                    <h2 class="contact-title">Vamos Construir Algo Incrível?</h2>
-                    <p class="contact-desc">
-                        Estou pronto para trazer rigor técnico, prevenção de defeitos e excelência à sua equipe de tecnologia. Vamos conversar!
-                    </p>
-                    
-                    <div class="contact-links">
-                        <a href="mailto:pedroipcarvalho@gmail.com" class="btn btn-primary">
-                            <i class="far fa-envelope"></i>
-                            <span>pedroipcarvalho@gmail.com</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/pedro-izaac-pereira-carvalho-450961163/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                            <i class="fab fa-linkedin-in"></i>
-                            <span>Conectar no LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/PedroiCarvalho" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
+                <div class="section-heading">
+                    <span class="section-pre-title">03 / Portfólio Prático</span>
+                    <h2 class="section-main-title">Projetos &amp; Estudos de Caso</h2>
+                    <p class="section-intro-text">Casos reais e práticos demonstrando automação de testes, validação de APIs, usabilidade e infraestrutura de TI.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Projeto 1: Automação & Validação de API REST com Postman -->
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <div class="project-mockup-browser">
+                                <div class="browser-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <div class="browser-url">postman.api-tests/pedro</div>
+                            </div>
+                            <div class="project-image-container">
+                                <div class="project-visual-cover visual-joao">
+                                    <div class="visual-badge"><i class="fas fa-bolt"></i> Testes de API REST</div>
+                                    <div class="visual-content-preview">
+                                        <div class="preview-mini-card active"><i class="fas fa-check"></i> Status 200/201</div>
+                                        <div class="preview-mini-card"><i class="fas fa-clock"></i> Response Time &lt; 200ms</div>
+                                        <div class="preview-mini-card"><i class="fas fa-code"></i> JSON Schema Valid</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-badge">Quality Assurance &amp; Backend</span>
+                                <h3 class="project-title">Suite de Testes Automatizados de API REST</h3>
+                            </div>
+
+                            <p class="project-summary">
+                                Construção de coleções de testes no Postman com scripts JavaScript para validação de fluxos CRUD, autenticação JWT, consistência de payloads e respostas de erro 4xx/5xx.
+                            </p>
+
+                            <div class="project-details-block">
+                                <div class="project-detail-row">
+                                    <strong>O que foi feito:</strong>
+                                    <span>Criação de testes automatizados com variáveis de ambiente dinâmicas, validação de schema JSON (tv4/ajv) e testes de regressão de endpoints.</span>
+                                </div>
+                                <div class="project-detail-row">
+                                    <strong>Por que e como:</strong>
+                                    <span>Garantir a integridade dos contratos de API antes da integração com o front-end, reduzindo retrabalho de desenvolvimento.</span>
+                                </div>
+                                <div class="project-detail-row">
+                                    <strong>Resultado:</strong>
+                                    <span>100% de cobertura nos cenários críticos de negócio e relatórios claros de execução e tempo de resposta.</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Postman</span>
+                                <span class="tech-tag">JavaScript Test Scripts</span>
+                                <span class="tech-tag">JSON Schema</span>
+                                <span class="tech-tag">RESTful APIs</span>
+                                <span class="tech-tag">Regressão</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/PedroiCarvalho" target="_blank" rel="noopener noreferrer" class="btn btn-project-primary">
+                                    <i class="fab fa-github"></i>
+                                    <span>Ver Repositório no GitHub</span>
+                                </a>
+                                <a href="#contact" class="btn btn-project-secondary">
+                                    <i class="far fa-comments"></i>
+                                    <span>Conversar Sobre o Projeto</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2: Mundo Lúdico do João — Aplicação Web & Testes de Acessibilidade -->
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <div class="project-mockup-browser">
+                                <div class="browser-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <div class="browser-url">mundoludicodojoao.app</div>
+                            </div>
+                            <div class="project-image-container">
+                                <div class="project-visual-cover visual-pdx">
+                                    <div class="visual-badge"><i class="fas fa-puzzle-piece"></i> Aplicação Web &amp; UX Test</div>
+                                    <div class="visual-content-preview">
+                                        <div class="preview-mini-card"><i class="fas fa-universal-access"></i> Acessibilidade</div>
+                                        <div class="preview-mini-card active"><i class="fas fa-shield-halved"></i> Zero Bugs UI</div>
+                                        <div class="preview-mini-card"><i class="fas fa-mobile-screen"></i> Cross-device</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-badge">Web App &amp; Garantia da Qualidade</span>
+                                <h3 class="project-title">Mundo Lúdico do João — Aprendizado Suave</h3>
+                            </div>
+
+                            <p class="project-summary">
+                                Aplicação web interativa desenvolvida com foco em acessibilidade e neurodiversidade infantil. Submetida a rigorosos testes funcionais, de usabilidade e compatibilidade entre dispositivos.
+                            </p>
+
+                            <div class="project-details-block">
+                                <div class="project-detail-row">
+                                    <strong>O que foi feito:</strong>
+                                    <span>Desenvolvimento com JavaScript modular e execução de matriz de testes cobrindo áudio web, eventos de toque, responsividade e contraste de cores.</span>
+                                </div>
+                                <div class="project-detail-row">
+                                    <strong>Por que e como:</strong>
+                                    <span>Garantir que a experiência de crianças atípicas fosse fluida, sem travamentos, sem quebras visuais e com tempo de resposta imediato.</span>
+                                </div>
+                                <div class="project-detail-row">
+                                    <strong>Resultado:</strong>
+                                    <span>Tempo de carregamento inferior a 1 segundo, zero falhas em testes de usabilidade e alta aderência em tablets e smartphones.</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">HTML5 / CSS3</span>
+                                <span class="tech-tag">JavaScript Modular</span>
+                                <span class="tech-tag">Testes de Usabilidade</span>
+                                <span class="tech-tag">Auditoria WCAG</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://pedroicarvalho.github.io/PedroiCarvalho/" target="_blank" rel="noopener noreferrer" class="btn btn-project-primary">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                    <span>Ver Projeto Online</span>
+                                </a>
+                                <a href="https://github.com/PedroiCarvalho" target="_blank" rel="noopener noreferrer" class="btn btn-project-secondary">
+                                    <i class="fab fa-github"></i>
+                                    <span>Código no GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3: Infraestrutura Corporativa & Soluções Técnicas na Padux -->
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <div class="project-mockup-browser">
+                                <div class="browser-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <div class="browser-url">padux.infra.solution/case</div>
+                            </div>
+                            <div class="project-image-container">
+                                <div class="project-visual-cover visual-ds">
+                                    <div class="visual-badge"><i class="fas fa-server"></i> Infraestrutura &amp; TI</div>
+                                    <div class="visual-content-preview">
+                                        <div class="preview-mini-card active"><i class="fas fa-network-wired"></i> Redes Estruturadas</div>
+                                        <div class="preview-mini-card"><i class="fas fa-screwdriver-wrench"></i> Suporte N1/N2</div>
+                                        <div class="preview-mini-card"><i class="fas fa-shield"></i> Alta Confiabilidade</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-badge">Infraestrutura &amp; Gestão Técnica</span>
+                                <h3 class="project-title">Padux — Gestão de Infraestrutura e Suporte de TI</h3>
+                            </div>
+
+                            <p class="project-summary">
+                                Mais de 12 anos de atuação contínua no gerenciamento de redes corporativas, servidores, manutenção de hardware/software e diagnóstico aprofundado de falhas em TI.
+                            </p>
+
+                            <div class="project-details-block">
+                                <div class="project-detail-row">
+                                    <strong>O que foi feito:</strong>
+                                    <span>Estruturação completa de redes locais (LAN/WLAN), configuração de roteamento, backup e manutenção preventiva e corretiva para empresas e clientes finais.</span>
+                                </div>
+                                <div class="project-detail-row">
+                                    <strong>Por que e como:</strong>
+                                    <span>Minimizar tempo de inatividade (downtime), prevenir falhas de segurança e garantir o funcionamento ininterrupto de estações de trabalho e sistemas.</span>
+                                </div>
+                                <div class="project-detail-row">
+                                    <strong>Resultado:</strong>
+                                    <span>Histórico de mais de uma década com alto índice de satisfação, resolução ágil de incidentes críticos e base sólida para QA.</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Infraestrutura de TI</span>
+                                <span class="tech-tag">Redes TCP/IP</span>
+                                <span class="tech-tag">Troubleshooting</span>
+                                <span class="tech-tag">Gestão de Incidentes</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="#contact" class="btn btn-project-primary">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Solicitar Referências Técnicas</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/pedro-izaac-pereira-carvalho-450961163/" target="_blank" rel="noopener noreferrer" class="btn btn-project-secondary">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>Ver no LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             5. EXPERIÊNCIAS
+             ============================================================ -->
+        <section id="experience" class="section-container bg-surface-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-pre-title">04 / Trajetória &amp; Prática</span>
+                    <h2 class="section-main-title">Experiências Profissionais</h2>
+                    <p class="section-intro-text">Histórico profissional comprovado, com vivência sólida em serviços de TI, transição para QA e rigor em dados.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-track" aria-hidden="true"></div>
+
+                    <!-- Experiência 1: Padux -->
+                    <div class="timeline-card-item">
+                        <div class="timeline-marker active">
+                            <span class="marker-core"></span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <div>
+                                    <span class="timeline-period-badge">Jan de 2014 — Presente (12 anos e 8 meses)</span>
+                                    <h3 class="timeline-role">Proprietário da Empresa &amp; Especialista em TI</h3>
+                                    <h4 class="timeline-company">Padux · Autônomo · Juazeiro do Norte, Ceará, Brasil (Híbrido)</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Gestão e execução integral de serviços de tecnologia, suporte técnico de TI, infraestrutura de redes e desenvolvimento de soluções web para clientes corporativos e individuais.
+                                </p>
+                                <ul class="timeline-bullet-list">
+                                    <li>Manutenção preventiva e corretiva de computadores, servidores e estações de trabalho, com foco em diagnóstico de causa raiz.</li>
+                                    <li>Instalação, configuração e homologação de softwares operacionais, sistemas de gestão e segurança de dados.</li>
+                                    <li>Planejamento e montagem de infraestrutura de redes cabeadas e sem fio (TCP/IP, roteadores, switches, DNS e DHCP).</li>
+                                    <li>Desenvolvimento de páginas institucionais com HTML5/CSS/JavaScript e atendimento direto aos clientes com levantamento de requisitos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiência 2: Transição QA & Automação -->
+                    <div class="timeline-card-item">
+                        <div class="timeline-marker active">
+                            <span class="marker-core"></span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <div>
+                                    <span class="timeline-period-badge">2024 — Presente</span>
+                                    <h3 class="timeline-role">Qualidade de Software (QA) &amp; Automação de Testes</h3>
+                                    <h4 class="timeline-company">Projetos Práticos, Portfólio &amp; Estudos Aplicados</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Aplicação prática de técnicas de teste de software para garantia da confiabilidade e prevenção de falhas em aplicações web e APIs REST.
+                                </p>
+                                <ul class="timeline-bullet-list">
+                                    <li>Elaboração de planos e casos de teste detalhados, matriz de rastreabilidade e escrita em formato BDD.</li>
+                                    <li>Execução de testes funcionais manuais, exploratórios, regressão e reporte estruturado de defeitos no Jira/GitHub.</li>
+                                    <li>Automação de validação de endpoints de API REST com Postman e scripts JavaScript (validação de contratos, schemas JSON e status codes).</li>
+                                    <li>Estudos contínuos em automação de interface com Selenium WebDriver e integração de boas práticas ágeis.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiência 3: IBGE -->
+                    <div class="timeline-card-item">
+                        <div class="timeline-marker">
+                            <span class="marker-core"></span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <div>
+                                    <span class="timeline-period-badge">Jun de 2009 — Jun de 2011 (2 anos e 1 mês)</span>
+                                    <h3 class="timeline-role">APM — Agente de Pesquisas e Mapeamento</h3>
+                                    <h4 class="timeline-company">IBGE (Instituto Brasileiro de Geografia e Estatística) · Juazeiro do Norte, CE</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Atuação na coleta, validação e controle de qualidade de dados estatísticos e geográficos fundamentais para a produção de pesquisas censitárias oficiais.
+                                </p>
+                                <ul class="timeline-bullet-list">
+                                    <li>Condução de coletas de dados em campo com rigor metodológico e estrita conformidade com os critérios do órgão.</li>
+                                    <li>Verificação da consistência e integridade das informações coletadas, identificando e corrigindo discrepâncias nos registros.</li>
+                                    <li>Comunicação direta com o público e organização metódica de relatórios para auditoria interna de dados.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             6. FORMAÇÃO
+             ============================================================ -->
+        <section id="education" class="section-container">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-pre-title">05 / Qualificação &amp; Estudos</span>
+                    <h2 class="section-main-title">Formação Acadêmica &amp; Certificações</h2>
+                    <p class="section-intro-text">Pós-graduações, graduações superiores e certificações técnicas com código de validação.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="education-cards-grid">
+                    <!-- Card 1: Pós-Graduações FAAL -->
+                    <div class="edu-card">
+                        <div class="edu-card-top">
+                            <div class="edu-icon-badge">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <span class="edu-status-tag active">3x Pós-Graduações (2025 – 2026)</span>
+                        </div>
+                        <h3 class="edu-course-title">FAAL — Faculdade Alcance</h3>
+                        <h4 class="edu-institution-name">Pós-Graduações Lato Sensu em Tecnologia</h4>
+                        <div class="edu-sub-courses-list">
+                            <div class="edu-sub-item">
+                                <strong>Arquitetura de Software</strong>
+                                <span>Jul de 2025 – Jul de 2026</span>
+                            </div>
+                            <div class="edu-sub-item">
+                                <strong>Gestão da Qualidade de Software</strong>
+                                <span>Jul de 2025 – Fev de 2026</span>
+                            </div>
+                            <div class="edu-sub-item">
+                                <strong>Desenvolvimento em Aplicações Web</strong>
+                                <span>Jul de 2025 – Mar de 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Graduações -->
+                    <div class="edu-card">
+                        <div class="edu-card-top">
+                            <div class="edu-icon-badge">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                            <span class="edu-status-tag">2x Bacharelados Concluídos</span>
+                        </div>
+                        <h3 class="edu-course-title">Formação Superior</h3>
+                        <h4 class="edu-institution-name">Computação &amp; Gestão de Processos</h4>
+                        <div class="edu-sub-courses-list">
+                            <div class="edu-sub-item">
+                                <strong>Sistemas de Informação (Bacharelado)</strong>
+                                <span>Faculdade Paraíso do Ceará (FAP) · Jan 2009 – Jan 2013</span>
+                            </div>
+                            <div class="edu-sub-item">
+                                <strong>Administração (Bacharelado)</strong>
+                                <span>Universidade Federal do Cariri (UFCA) · 2016 – Jan 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Licenças e Certificados -->
+                    <div class="edu-card">
+                        <div class="edu-card-top">
+                            <div class="edu-icon-badge">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <span class="edu-status-tag">Licenças &amp; Certificados</span>
+                        </div>
+                        <h3 class="edu-course-title">Certificações Especializadas em QA</h3>
+                        <h4 class="edu-institution-name">Udemy &amp; Plataformas de Testes</h4>
+                        <div class="edu-sub-courses-list">
+                            <div class="edu-sub-item">
+                                <strong>Javascript para QAs</strong>
+                                <span>Udemy · Emitida em set de 2025</span>
+                                <small class="cert-code">Credencial: UC-74ceffb0-5a15-4ae1-a05d-7a64c6e86dec</small>
+                            </div>
+                            <div class="edu-sub-item">
+                                <strong>Testes Automáticos + Curso COMPLETO</strong>
+                                <span>Udemy · Emitida em ago de 2025</span>
+                                <small class="cert-code">Credencial: UC-ac084e50-57fd-4d5c-b82c-6ddcb80c2f4a</small>
+                            </div>
+                            <div class="edu-sub-item">
+                                <strong>Testes de Software com Julio de Lima</strong>
+                                <span>Cursa · Emitida em ago de 2025</span>
+                                <small class="cert-code">Credencial: u6621114</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             7. CONTATO
+             ============================================================ -->
+        <section id="contact" class="section-container bg-surface-alt">
+            <div class="container">
+                <div class="contact-card-wrapper">
+                    <div class="contact-intro-column">
+                        <span class="section-pre-title">06 / Conexão Direta</span>
+                        <h2 class="contact-headline">Vamos conversar?</h2>
+                        <p class="contact-subtext">
+                            Estou pronto para agregar valor à sua equipe de engenharia e tecnologia como <strong>Analista de QA (Manual / Automação)</strong> ou <strong>Especialista em TI / Infraestrutura</strong>. Vamos marcar uma conversa!
+                        </p>
+
+                        <div class="direct-channels-list">
+                            <a href="mailto:pedroipcarvalho@gmail.com" class="direct-channel-item">
+                                <div class="channel-icon email-icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <div class="channel-details">
+                                    <span class="channel-label">E-mail Direto</span>
+                                    <span class="channel-value">pedroipcarvalho@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/pedro-izaac-pereira-carvalho-450961163/" target="_blank" rel="noopener noreferrer" class="direct-channel-item">
+                                <div class="channel-icon linkedin-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="channel-details">
+                                    <span class="channel-label">LinkedIn</span>
+                                    <span class="channel-value">linkedin.com/in/pedro-izaac-pereira-carvalho</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/PedroiCarvalho" target="_blank" rel="noopener noreferrer" class="direct-channel-item">
+                                <div class="channel-icon github-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="channel-details">
+                                    <span class="channel-label">GitHub</span>
+                                    <span class="channel-value">github.com/PedroiCarvalho</span>
+                                </div>
+                            </a>
+
+                            <div class="direct-channel-item no-hover">
+                                <div class="channel-icon location-icon">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div class="channel-details">
+                                    <span class="channel-label">Localização</span>
+                                    <span class="channel-value">Juazeiro do Norte, Ceará, Brasil (Disponível Remoto / Híbrido)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulário de Mensagem Direta -->
+                    <div class="contact-form-column">
+                        <div class="form-surface">
+                            <h3 class="form-title">Envie uma mensagem</h3>
+                            <p class="form-subtitle">Preencha os campos abaixo para iniciar um contato profissional direto.</p>
+
+                            <form id="contactForm" class="styled-contact-form" novalidate>
+                                <div class="form-group">
+                                    <label for="senderName" class="form-label">Seu Nome ou Empresa <span class="required-star">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="far fa-user input-icon"></i>
+                                        <input type="text" id="senderName" name="name" class="form-input" placeholder="Ex: Lucas Mendes ou Tech Corp" required>
+                                    </div>
+                                    <span class="form-error-msg" id="nameError">Por favor, informe seu nome.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="senderEmail" class="form-label">Seu E-mail de Contato <span class="required-star">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="far fa-envelope input-icon"></i>
+                                        <input type="email" id="senderEmail" name="email" class="form-input" placeholder="Ex: lucas@empresa.com" required>
+                                    </div>
+                                    <span class="form-error-msg" id="emailError">Por favor, informe um e-mail válido.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="senderSubject" class="form-label">Assunto <span class="required-star">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="far fa-comment-dots input-icon"></i>
+                                        <input type="text" id="senderSubject" name="subject" class="form-input" placeholder="Ex: Oportunidade QA Tester / Vaga de Infraestrutura" required>
+                                    </div>
+                                    <span class="form-error-msg" id="subjectError">Por favor, informe o assunto da mensagem.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="senderMessage" class="form-label">Mensagem <span class="required-star">*</span></label>
+                                    <div class="textarea-wrapper">
+                                        <textarea id="senderMessage" name="message" class="form-textarea" rows="4" placeholder="Descreva brevemente a vaga, time ou proposta de projeto..." required></textarea>
+                                    </div>
+                                    <span class="form-error-msg" id="messageError">Por favor, digite sua mensagem.</span>
+                                </div>
+
+                                <button type="submit" class="btn btn-submit" id="submitFormBtn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Enviar Mensagem</span>
+                                </button>
+
+                                <div class="form-feedback-alert" id="formFeedback" role="alert" aria-live="polite"></div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>Pedro Izaac P. Carvalho &copy; 2026 — Analista de QA & Especialista em TI.</p>
-                <div class="footer-socials">
-                    <a href="https://github.com/PedroiCarvalho" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/pedro-izaac-pereira-carvalho-450961163/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:pedroipcarvalho@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+    <!-- ============================================================
+             8. RODAPÉ (FOOTER)
+             ============================================================ -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand-column">
+                <a href="#hero" class="footer-logo">Pedro Izaac Carvalho</a>
+                <p class="footer-tagline">Garantia da Qualidade (QA) &amp; Infraestrutura de TI. Conectando mais de uma década de experiência em TI à excelência em testes de software.</p>
+            </div>
+
+            <div class="footer-nav-column">
+                <h4 class="footer-heading">Navegação Rápida</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">Sobre mim</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#experience">Experiências</a></li>
+                    <li><a href="#education">Formação</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social-column">
+                <h4 class="footer-heading">Conectar</h4>
+                <div class="footer-social-icons">
+                    <a href="https://github.com/PedroiCarvalho" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Pedro Izaac" class="footer-social-btn">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pedro-izaac-pereira-carvalho-450961163/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Pedro Izaac" class="footer-social-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:pedroipcarvalho@gmail.com" aria-label="E-mail de Pedro Izaac" class="footer-social-btn">
+                        <i class="far fa-envelope"></i>
+                    </a>
                 </div>
+                <button class="back-to-top-btn" id="backToTop" aria-label="Voltar ao topo da página">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>Voltar ao topo</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-container">
+                <p class="copyright-text">
+                    &copy; 2026 <strong>Pedro Izaac Pereira Carvalho</strong>. Todos os direitos reservados.
+                </p>
+                <p class="footer-credits">
+                    Currículo online moderno &bull; Juazeiro do Norte, CE &bull; Disponível Remoto.
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Script Principal -->
     <script src="script.js"></script>
 </body>
 </html>
