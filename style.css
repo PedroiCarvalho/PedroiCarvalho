@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PEDRO IZAAC CARVALHO — QA & INFRAESTRUTURA DE TI
+   PEDRO IZAAC CARVALHO — QA ANALYST | SOFTWARE TESTING | IT INFRASTRUCTURE
    Design System & Estilos Principais
    Escala de 8px | Poppins + Inter | Mobile-First | CSS Custom Properties
    ========================================================================== */
@@ -516,7 +516,7 @@ img {
    -------------------------------------------------------------------------- */
 .hero-section {
     padding-top: var(--space-6);
-    padding-bottom: var(--space-7);
+    padding-bottom: var(--space-6);
     position: relative;
     z-index: 1;
 }
@@ -544,9 +544,9 @@ img {
     background: var(--color-success-bg);
     border: 1px solid rgba(16, 185, 129, 0.25);
     color: var(--color-success);
-    font-size: 0.825rem;
-    font-weight: 500;
-    margin-bottom: var(--space-3);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
 .badge-status-dot {
@@ -561,6 +561,23 @@ img {
 @keyframes pulseGlow {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.hero-sub-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.775rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-3);
+}
+
+.sub-badge-sep {
+    color: var(--brand-primary);
+    opacity: 0.6;
 }
 
 .hero-headline {
@@ -585,6 +602,10 @@ img {
     margin-bottom: var(--space-4);
 }
 
+.hero-subheadline strong {
+    color: var(--text-primary);
+}
+
 .hero-cta-group {
     display: flex;
     flex-wrap: wrap;
@@ -599,7 +620,7 @@ img {
     max-width: 280px;
 }
 
-/* Métricas Rápidas */
+/* Métricas Rápidas Qualitativas */
 .hero-quick-stats {
     display: flex;
     flex-direction: column;
@@ -619,7 +640,7 @@ img {
 
 .stat-number {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--brand-primary);
 }
@@ -735,7 +756,112 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   8. SEÇÃO 2: SOBRE MIM
+   8. ELEMENTO VISUAL CENTRAL: INFRA -> CÓDIGO -> TESTES -> QUALIDADE
+   -------------------------------------------------------------------------- */
+.career-flow-wrapper {
+    margin-top: var(--space-6);
+}
+
+.career-flow-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-sm);
+}
+
+.career-flow-header {
+    text-align: center;
+    margin-bottom: var(--space-4);
+}
+
+.flow-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.flow-headline {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.career-flow-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.career-flow-step {
+    flex: 1;
+    width: 100%;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.career-flow-step:hover {
+    border-color: var(--border-highlight);
+    transform: translateY(-2px);
+}
+
+.career-flow-step.active-flow {
+    border-color: var(--brand-primary);
+    background: var(--brand-primary-subtle);
+    box-shadow: 0 0 16px var(--brand-primary-glow);
+}
+
+.flow-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    color: var(--brand-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.flow-step-name {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+}
+
+.flow-step-desc {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+.flow-connector {
+    color: var(--brand-primary);
+    font-size: 1rem;
+    transform: rotate(90deg);
+    opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   9. SEÇÃO 2: SOBRE MIM & PILARES
    -------------------------------------------------------------------------- */
 .about-grid {
     display: grid;
@@ -753,11 +879,11 @@ img {
 
 .about-greeting {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--brand-primary);
     margin-bottom: var(--space-3);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .about-paragraph {
@@ -814,20 +940,20 @@ img {
 
 .pillar-info h4 {
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 0.975rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 4px;
 }
 
 .pillar-info p {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
     line-height: 1.5;
 }
 
 /* --------------------------------------------------------------------------
-   9. SEÇÃO 3: HABILIDADES & FERRAMENTAS
+   10. SEÇÃO 3: HABILIDADES & FERRAMENTAS
    -------------------------------------------------------------------------- */
 .skills-category-grid {
     display: grid;
@@ -949,7 +1075,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   10. SEÇÃO 4: PROJETOS (CARDS OBJETIVOS)
+   11. SEÇÃO 4: PROJETOS (OBJETIVOS & SEM MÉTRICAS FALSAS)
    -------------------------------------------------------------------------- */
 .projects-grid {
     display: grid;
@@ -1018,7 +1144,7 @@ img {
 }
 
 .project-image-container {
-    height: 200px;
+    height: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1114,23 +1240,16 @@ img {
 
 .project-title {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.01em;
 }
 
-.project-summary {
-    font-size: 0.925rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: var(--space-3);
-}
-
-.project-details-block {
+.project-structured-info {
     display: flex;
     flex-direction: column;
-    gap: var(--space-1);
+    gap: var(--space-2);
     background: var(--bg-surface-elevated);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
@@ -1138,15 +1257,62 @@ img {
     margin-bottom: var(--space-3);
 }
 
-.project-detail-row {
+.structured-item {
     font-size: 0.85rem;
     line-height: 1.5;
     color: var(--text-secondary);
 }
 
-.project-detail-row strong {
+.structured-item strong {
     color: var(--text-primary);
-    margin-right: 4px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Área de Screenshots Placeholder Discreta */
+.screenshots-placeholder-area {
+    margin-bottom: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    background: var(--bg-surface-elevated);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-md);
+}
+
+.screenshots-placeholder-header {
+    font-size: 0.775rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.screenshots-placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.placeholder-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 4px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.placeholder-slot i {
+    font-size: 0.9rem;
+    color: var(--brand-primary);
+    opacity: 0.8;
 }
 
 .project-tech-stack {
@@ -1214,7 +1380,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   11. SEÇÃO 5: EXPERIÊNCIAS (TIMELINE ESTRUTURADA)
+   12. SEÇÃO 5: EXPERIÊNCIAS (TIMELINE ESTRUTURADA)
    -------------------------------------------------------------------------- */
 .timeline-container {
     position: relative;
@@ -1325,7 +1491,7 @@ img {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .timeline-bullet-list li {
@@ -1344,8 +1510,12 @@ img {
     font-size: 0.9rem;
 }
 
+.timeline-bullet-list li strong {
+    color: var(--text-primary);
+}
+
 /* --------------------------------------------------------------------------
-   12. SEÇÃO 6: FORMAÇÃO ACADÊMICA & CERTIFICADOS
+   13. SEÇÃO 6: FORMAÇÃO ACADÊMICA & CERTIFICADOS
    -------------------------------------------------------------------------- */
 .education-cards-grid {
     display: grid;
@@ -1459,7 +1629,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   13. SEÇÃO 7: CONTATO (FORMULÁRIO + CANAIS DIRETOS)
+   14. SEÇÃO 7: CONTATO (FORMULÁRIO + CANAIS DIRETOS)
    -------------------------------------------------------------------------- */
 .contact-card-wrapper {
     display: grid;
@@ -1697,7 +1867,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   14. SEÇÃO 8: RODAPÉ (FOOTER)
+   15. SEÇÃO 8: RODAPÉ (FOOTER)
    -------------------------------------------------------------------------- */
 .site-footer {
     background: var(--bg-surface);
@@ -1826,7 +1996,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   15. MENU MOBILE FLUTUANTE (DRAWER / OVERLAY)
+   16. MENU MOBILE FLUTUANTE (DRAWER / OVERLAY)
    -------------------------------------------------------------------------- */
 @media (max-width: 767px) {
     .nav-menu {
@@ -1883,7 +2053,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   16. MEDIA QUERIES (TABLET & DESKTOP ENHANCEMENTS)
+   17. MEDIA QUERIES (TABLET & DESKTOP ENHANCEMENTS)
    -------------------------------------------------------------------------- */
 @media (min-width: 640px) {
     .hero-quick-stats {
@@ -1908,6 +2078,16 @@ img {
     .project-actions .btn-project-primary,
     .project-actions .btn-project-secondary {
         flex: 1;
+    }
+
+    .career-flow-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--space-1);
+    }
+
+    .flow-connector {
+        transform: rotate(0deg);
     }
 }
 
@@ -2019,7 +2199,19 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   17. ESTILOS OTIMIZADOS PARA IMPRESSÃO / PDF CV (@media print)
+   18. PREFERS-REDUCED-MOTION (ACESSIBILIDADE)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   19. ESTILOS OTIMIZADOS PARA IMPRESSÃO / PDF CV (@media print)
    -------------------------------------------------------------------------- */
 @media print {
     *, *::before, *::after {
@@ -2048,7 +2240,9 @@ img {
     .back-to-top-btn,
     .footer-social-icons,
     .site-footer,
-    .availability-badge {
+    .availability-badge,
+    .hero-sub-badges,
+    .screenshots-placeholder-area {
         display: none !important;
     }
 
@@ -2091,7 +2285,8 @@ img {
     .project-card,
     .timeline-card,
     .edu-card,
-    .skill-category-card {
+    .skill-category-card,
+    .career-flow-card {
         border: 1px solid #ccc !important;
         border-radius: 4px !important;
         padding: 10px !important;
